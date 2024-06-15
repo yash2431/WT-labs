@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Palindrome no</title>
+    </head>
+    <body>
+        <script>
+            let a = prompt("enter a no:");
+            let temp=a;
+            let rev=0;
+            while(a>0){
+                let rem=a%10;
+                rev=rev*10+rem;
+                a=Math.floor(a/10);
+            }
+            if(temp==rev){
+                document.write("is a palindrome no");
+            }
+            else{
+                document.write("is not a palindrome no");
+            }
+        </script>
+    </body>
+</html>

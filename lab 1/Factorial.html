@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Factorial</title>
+    </head>
+    <body>
+        <script>
+            let a = prompt("enter a no:");
+            function factorial(n) {
+                if (n == 0) {
+                    return 1;
+                }
+                else {
+                    return n * factorial(n - 1);
+            }
+        }
+        console.log(factorial(a));
+        </script>
+        </body>
+</html>

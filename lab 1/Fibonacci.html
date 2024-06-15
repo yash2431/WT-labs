@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Fibonacci</title>
+    </head>
+    <body>
+        <script>
+            let a = prompt("enter a no:");
+            function fibonacci(n) {
+                if (n <= 1) {
+                    return n;
+                    }
+                    else {
+                        return fibonacci(n - 1) + fibonacci(n - 2);
+                    }
+                }
+                console.log(fibonacci(a));
+        </script>
+    </body>
+</html>
