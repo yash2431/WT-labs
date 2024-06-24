@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Loop Usage</title>
+</head>
+<body>
+<script>
+function searchWord(sentence, word) {
+    for (var i = 0; i < sentence.length; i++) {
+        if (sentence[i] === word) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+var sentence = ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"];
+var word = "fox";
+var index = searchWord(sentence, word);
+if (index !== -1) {
+    console.log("The word '" + word + "' is found at index " + index + ".");
+} else {
+    console.log("The word '" + word + "' is not found in the sentence.");
+}
+</script>
+</body>
+</html>

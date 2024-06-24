@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>WAP to read an array from the user and sort them in ascending order</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        var n = parseInt(prompt("Enter the number of elements: "));
+        for(var i=0; i<n; i++){
+            arr[i] = parseInt(prompt("Enter elements:" + (i+1) + ":"));
+        }
+        arr.sort(function(a,b){return a-b});
+        document.write("Sorted array in ascending order: " + arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Factors of a no</title>
+    </head>
+    <body>
+        <script>
+            let a = prompt("enter a no:");
+            let factors = [];
+            for (let i = 1; i <= a; i++) {
+                if (a%i==0){
+                    factors.push(i);
+                }
+            }
+            document.write("factors of:"+a+"are:"+factors);
+        </script>
+    </body>
+</html>

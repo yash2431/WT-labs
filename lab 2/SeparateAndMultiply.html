@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Write a JavaScript to take 2-digit number and then separate these 2 digits, then multiply 
+            first digit by itself for second digit times</title>
+    </head>
+    <body>
+        <script>
+            function separateAndMultiply(){
+            var num = prompt("Enter a 2-digit number: ");
+            var firstDigit = Math.floor(num / 10);
+            var secondDigit = num % 10;
+            var result = Math.pow(firstDigit, secondDigit);
+            document.write("The result is: " + result);
+            }
+            separateAndMultiply();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>WAP to read an array from the user and sort them using bubble sort</title>
+    </head>
+    <body>
+        <script>
+            var arr = [];
+            var n = parseInt(prompt("Enter the number of elements:"));
+            for(var i=0; i<n; i++){
+            arr[i] = parseInt(prompt("Enter element "+(i+1)+":"));
+            }
+            document.write("Original array: "+arr+"<br>");
+            for(var i=0; i<n-1; i++){
+                for(var j=0; j<n-i-1; j++){
+                    if(arr[j]>arr[j+1]){
+                        var temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                        }
+                    }
+                }
+                document.write("Sorted array: "+arr+"<br>");
+        </script>
+    </body>
+</html>

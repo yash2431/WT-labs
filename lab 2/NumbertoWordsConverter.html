@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Number to Words Converter</h2>
+    <button onclick="convertToWords()">Convert Number</button>
+    <div id="result"></div>
+
+    <script>
+        function convertToWords() {
+            var numberStr = prompt("Enter a number between 0 and 999:");
+            var number = parseInt(numberStr);
+
+            if (isNaN(number)) {
+                document.getElementById("result").innerText = "Not a number";
+            } else if (number < 0 || number > 999) {
+                document.getElementById("result").innerText = "Out of range";
+            } else {
+                var words = numberToWords(number);
+                document.getElementById("result").innerText = words;
+            }
+        }
+
+        function numberToWords(number) {
+            var units = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+            var teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+            var tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+            if (number < 10) {
+                return units[number];
+            } else if (number < 20) {
+                return teens[number - 10];
+            } else if (number < 100) {
+                var tensDigit = Math.floor(number / 10);
+                var unitsDigit = number % 10;
+                return tens[tensDigit] + (unitsDigit !== 0 ? ' ' + units[unitsDigit] : '');
+            } else {
+                var hundredsDigit = Math.floor(number / 100);
+                var remaining = number % 100;
+                return units[hundredsDigit] + ' hundred' + (remaining !== 0 ? ' ' + numberToWords(remaining) : '');
+            }
+        }
+    </script>
+</body>
+</html>

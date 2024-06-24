@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort</title>
+</head>
+<body>
+    <h2>Quick Sort</h2>
+    <label for="arrayInput">Enter array elements separated by commas (,):</label><br>
+    <input type="text" id="arrayInput" placeholder="e.g., 5,2,8,1,4"><br>
+    <button onclick="sortArray()">Sort Array</button>
+    <div id="sortedArray"></div>
+
+    <script>
+        function sortArray() {
+            var input = document.getElementById("arrayInput").value.trim();
+            var array = input.split(',').map(Number);
+
+            quickSort(array, 0, array.length - 1);
+
+            document.getElementById("sortedArray").innerText = "Sorted Array: " + array.join(', ');
+        }
+
+        function quickSort(arr, low, high) {
+            if (low < high) {
+                var pi = partition(arr, low, high);
+                quickSort(arr, low, pi - 1);
+                quickSort(arr, pi + 1, high);
+            }
+        }
+
+        function partition(arr, low, high) {
+            var pivot = arr[high];
+            var i = low - 1;
+
+            for (var j = low; j < high; j++) {
+                if (arr[j] < pivot) {
+                    i++;
+                    var temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+
+            var temp = arr[i + 1];
+            arr[i + 1] = arr[high];
+            arr[high] = temp;
+
+            return i + 1;
+        }
+    </script>
+</body>
+</html>

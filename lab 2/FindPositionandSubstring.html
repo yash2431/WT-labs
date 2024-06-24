@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Position and Substring between First and Last Occurrence of 'a'</title>
+</head>
+<body>
+    <h2>Find Position and Substring between First and Last Occurrence of 'a'</h2>
+    <input type="text" id="inputWord" placeholder="Enter a word">
+    <button onclick="findAndDisplay()">Find</button>
+    <div id="result"></div>
+
+    <script>
+        function findAndDisplay() {
+            var word = document.getElementById("inputWord").value.trim().toLowerCase();
+            var firstIndex = word.indexOf('a');
+            var lastIndex = word.lastIndexOf('a');
+
+            if (firstIndex === -1 || lastIndex === -1) {
+                document.getElementById("result").innerText = "The word does not contain the vowel 'a'.";
+            } else {
+                var substringBetween = word.substring(firstIndex + 1, lastIndex);
+                document.getElementById("result").innerText = "First occurrence of 'a': " + (firstIndex + 1) +", Last occurrence of 'a': " + (lastIndex + 1) +", Substring between: " + substringBetween;
+            }
+        }
+    </script>
+</body>
+</html>

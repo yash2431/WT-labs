@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Greatest common digit</title>
+    </head>
+    <body>
+        <script>
+            let a = prompt("enter a no:");
+            let b = prompt("enter a no:");
+            let gcd = function(a,b){
+                if(b==0){
+                    return a;
+                }
+                else{
+                    return gcd(b,a%b);
+                }
+            }
+            let result = gcd(a,b);
+            document.write("GCD of "+a+"and"+b+"is:"+result);
+        </script>
+    </body>
+</html>
