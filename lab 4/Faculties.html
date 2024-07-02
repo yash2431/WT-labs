@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>WAP to display Faculties stored in array</title>
+    </head>
+    <body>
+        <script>
+            let arr = [
+                {
+                    "FacultyID": 1,
+                    "FacultyName": "Rahul",
+                    "Department": "CSE",
+                    },
+                    {
+                        "FacultyID": 2,
+                        "FacultyName": "Raj",
+                        "Department": "ECE",
+                        },
+                        {
+                            "FacultyID": 3,
+                            "FacultyName": "Rohan",
+                            "Department": "CSE",
+                            },
+                            {
+                                "FacultyID": 4,
+                                "FacultyName": "Rahul",
+                                "Department": "ECE",
+                                },
+                                {
+                                    "FacultyID": 5,
+                                    "FacultyName": "Raj",
+                                    "Department": "CSE"
+                                    }
+                                    ];
+                                    document.write("<table border='1'>");
+                                        document.write("<tr><th>Faculty ID</th><th>Faculty Name</th><th>Department</th></tr>");
+                                        for(let i=0; i<arr.length; i++){
+                                            document.write("<tr>");
+                                                document.write("<td>"+arr[i].FacultyID+"</td>");
+                                                document.write("<td>"+arr[i].FacultyName+"</td>");
+                                                document.write("<td>"+arr[i].Department+"</td>");
+                                                document.write("</tr>");
+                                                }
+                                                document.write("</table>");
+        </script>
+    </body>
+</html>

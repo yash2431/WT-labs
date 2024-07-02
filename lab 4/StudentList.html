@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <ul id="student-list"></ul>
+
+    <script>
+        // Array of student names
+        const students = ['Alice', 'Bob', 'Charlie', 'David', 'Eva'];
+
+        // Function to display students
+        function displayStudents(studentArray) {
+            const studentList = document.getElementById('student-list');
+
+            // Clear the list if there's any previous content
+            studentList.innerHTML = '';
+
+            // Iterate over the student array and create list items
+            studentArray.forEach(student => {
+                const listItem = document.createElement('li');
+                listItem.textContent = student;
+                studentList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display the students
+        displayStudents(students);
+    </script>
+</body>
+</html>

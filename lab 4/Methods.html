@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Demonstrate different array functions like push, pop, shift, unshift, splice, sort etc…</title>
+    </head>
+    <body>
+        <script>
+            let arr = [1,2,3,4,5];
+            document.write("Original array:", arr);
+            arr.push(6);
+            document.write("<br>After push:", arr);
+            arr.pop();
+            document.write("<br>After pop:", arr);
+            arr.shift();
+            document.write("<br>After shift:", arr);
+            arr.unshift();
+            document.write("<br>After unshift:", arr);
+            arr.splice(2, 1, 7, 8, 9);
+            document.write("<br>After splice:", arr);
+            arr.sort();
+            document.write("<br>After sort:", arr);
+        </script>
+    </body>
+</html>

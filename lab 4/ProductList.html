@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <ul id="product-list"></ul>
+
+    <script>
+        // Array of products
+        const products = [
+            { name: 'Laptop', price: 1000 },
+            { name: 'Smartphone', price: 700 },
+            { name: 'Tablet', price: 500 },
+            { name: 'Headphones', price: 100 },
+            { name: 'Smartwatch', price: 300 }
+        ];
+
+        // Function to display products
+        function displayProducts(productArray) {
+            const productList = document.getElementById('product-list');
+
+            // Clear the list if there's any previous content
+            productList.innerHTML = '';
+
+            // Iterate over the product array and create list items
+            productArray.forEach(product => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${product.name} - $${product.price}`;
+                productList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display the products
+        displayProducts(products);
+    </script>
+</body>
+</html>
