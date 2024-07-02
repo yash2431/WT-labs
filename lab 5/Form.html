@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Write a JavaScript program to validate user data given from the HTML form
+            1) username must be of minimum 8 characters
+            2) password must contain at least 1 digit and 1 special character and should be between 8-12 characters
+            3) password and repeat password must be same
+            4) age must be greater than 18 (calculate from date of birth)
+            5) enrollment must be of 11 digits
+            6) email validation</title>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form id="myForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <label for="repeatPassword">Repeat Password:</label><br>
+            <input type="password" id="repeatPassword" name="repeatPassword"><br>
+            <label for="dateOfBirth">Date of Birth:</label><br>
+            <input type="date" id="dateOfBirth" name="dateOfBirth"><br>
+            <label for="enrollment">Enrollment Number:</label><br>
+            <input type="text" id="enrollment" name="enrollment"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" onclick="checkData()" value="Submit">
+            </form>
+            <script>
+                function checkData(){
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    var repeatPassword = document.getElementById("repeatPassword").value;
+                    var dateOfBirth = document.getElementById("dateOfBirth").value;
+                    var enrollment = document.getElementById("enrollment").value;
+                    var email = document.getElementById("email").value;
+                    var flag = true;
+                    if(username.length < 8){
+                        alert("Username should be less then 8 characters");
+                    }
+                    if(password.length < 8 || password.length > 12){
+                        alert("Password should be between 8-12 characters");
+                    }
+                    if(password.search(/[0-9]/) == -1){
+                        alert("Password should contain at least 1 digit");
+                    }
+                    if(password.search(/[!@#$%^&*]/) == -1){
+                        alert("Password should contain at least 1 special character");
+                    }
+                    if(password != repeatpassword){
+                        alert("Password and Repeat Password should be same");
+                    }
+                    if(dateOfBirth < 18){
+                        alert("Age should be greater than 18");
+                    }
+                    if(enrollment.length != 11){
+                        alert("Enrollment Number should be 11 digits");
+                    }
+                    if(email.search("@") == -1){
+                        alert("Email should contain @");
+                    }
+                    if(email.search(".com") == -1){
+                        alert("Email should contain .com");
+                    }
+                    if(flag == true){
+                        alert("Registration Successful");
+                    }
+                }
+            </script>
+    </body>
+</html>

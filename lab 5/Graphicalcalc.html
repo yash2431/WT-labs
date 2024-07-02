@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>WAP to create a basic graphical Calculator using HTML and JavaScript</title>
+    </head>
+    <body>
+        <h1>Graphical calculator</h1>
+        <form>
+            <input type = "text" id = "result" readonly>
+            <br><br>
+            <input type = "button" value = "7" onclick = "document.getElementById('result').value += '7'">
+            <input type = "button" value = "8" onclick = "document.getElementById('result').value += '8'">
+            <input type = "button" value = "9" onclick = "document.getElementById('result').value += '9'">
+            <input type = "button" value = "/" onclick = "document.getElementById('result').value+= '/'">
+            <br><br>
+            <input type = "button" value = "4" onclick = "document.getElementById('result').value += '4'">
+            <input type = "button" value = "5" onclick = "document.getElementById('result').value += '5'">
+            <input type = "button" value = "6" onclick = "document.getElementById('result').value += '6'">
+            <input type = "button" value = "*" onclick = "document.getElementById('result').value += '*'">
+            <br><br>
+            <input type = "button" value = "1" onclick = "document.getElementById('result').value += '1'">
+            <input type = "button" value = "2" onclick = "document.getElementById('result').value += '2'">
+            <input type = "button" value = "3" onclick = "document.getElementById('result').value += '3'">
+            <input type = "button" value = "-" onclick = "document.getElementById('result').value += '-'">
+            <br><br>
+            <input type = "button" value = "0" onclick = "document.getElementById('result').value += '0'">
+            <input type = "button" value = "." onclick = "document.getElementById('result').value += '.'">
+            <input type = "button" value = "=" onclick = "document.getElementById('result').value= eval(document.getElementById('result').value)">
+            <input type = "button" value = "+" onclick = "document.getElementById('result').value += '+'">
+            <br><br>
+            <input type = "button" value = "C" onclick = "document.getElementById('result').value = ' '">
+            <input type = "button" value = "CE" onclick = "document.getElementById('result').value = ' '">
+            <input type = "button" value = "Backspace" onclick = "document.getElementById('result').value = document.getElementById('result').value.substring(0, document.getElementById('result').value.length - 1)">
+        </form>
+        <script>
+            function calculate(){
+                var result = document.getElementById('result').value;
+                if(result.includes("=")){
+                    result = result.replace("=", "");
+                    document.getElementById('result').value = eval(result);
+                }
+            }
+        </script>
+    </body>
+</html>
