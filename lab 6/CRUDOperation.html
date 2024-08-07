@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations on Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input[type="text"], button {
+            margin: 5px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CRUD Operations on Array</h2>
+    
+    <input type="text" id="item" placeholder="Enter item">
+    <button onclick="addItem()">Add Item</button>
+
+    <ul id="itemList">
+        <!-- List items will be dynamically added here -->
+    </ul>
+
+    <script>
+        // Initialize an empty array to store items
+let items = [];
+
+// Function to add item to the array and update the UI
+function addItem() {
+    let newItem = document.getElementById('item').value.trim();
+    if (newItem !== '') {
+        items.push(newItem);
+        document.getElementById('item').value = ''; // Clear input field
+        displayItems();
+    }
+}
+
+// Function to display items in the array
+function displayItems() {
+    let itemList = document.getElementById('itemList');
+    itemList.innerHTML = ''; // Clear existing list
+
+    items.forEach((item, index) => {
+        let li = document.createElement('li');
+        li.textContent = item;
+        
+        // Add delete button
+        let deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function() {
+            deleteItem(index);
+        };
+        
+        li.appendChild(deleteButton);
+        itemList.appendChild(li);
+    });
+}
+
+// Function to delete an item from the array
+function deleteItem(index) {
+    items.splice(index, 1);
+    displayItems();
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Demonstrate the Array and Object Destructuring</title>
+    </head>
+    <body>
+        <script>
+            arr = [1,2,3,4]
+            function display(){
+                const[first,second]=arr;
+                console.log(first,second);
+            }
+            display();
+
+            student={
+                name:'Rahul',
+                rollno: 22
+            };
+            function dis(){
+                const{name,rollno}=student;
+                document.write(name,rollno);
+            }
+            dis();
+        </script>
+    </body>
+</html>

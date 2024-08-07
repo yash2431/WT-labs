@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demonstrate the Arrow functions</title>
+</head>
+<body>
+    <script>
+                // Traditional function expression
+        let greet = function(name) {
+            let greeting = 'Hello, ' + name + '!';
+            return greeting;
+        };
+
+        // Arrow function equivalent
+        let greetArrow = (name) => {
+            let greeting = 'Hello, ' + name + '!';
+            return greeting;
+        };
+
+        console.log(greet('Alice'));       // Output: Hello, Alice!
+        console.log(greetArrow('Alice'));  // Output: Hello, Alice!
+
+    </script>
+</body>
+</html>

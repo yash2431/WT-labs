@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>WAP to demonstrate callbacks in JavaScript</title>
+    </head>
+    <body>
+        <script>
+            function callBackFunction(mainFunc){
+                alert("callback function called");
+                mainFunc();
+            }
+            callBackFunction(function(){
+                alert("main function called");
+            });
+        </script>
+    </body>
+</html>

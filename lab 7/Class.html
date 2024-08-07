@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demonstrate how to create a class in Java Script</title>
+</head>
+<body>
+	<script>
+					// Define a class named 'Person'
+			class Person {
+			    // Constructor method to initialize the object
+			    constructor(name, age) {
+			        this.name = name;
+			        this.age = age;
+			    }
+
+			    // Method to introduce the person
+			    introduce() {
+			        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+			    }
+
+			    // Getter method to retrieve the person's age
+			    getAge() {
+			        return this.age;
+			    }
+
+			    // Setter method to update the person's age
+			    setAge(newAge) {
+			        this.age = newAge;
+			    }
+			}
+
+			// Creating instances of the Person class
+			let person1 = new Person('Alice', 30);
+			let person2 = new Person('Bob', 25);
+
+			// Using methods of the Person class
+			person1.introduce();    // Output: Hello, my name is Alice and I am 30 years old.
+			person2.introduce();    // Output: Hello, my name is Bob and I am 25 years old.
+
+			// Using getter and setter methods
+			console.log(person1.getAge());  // Output: 30
+			person2.setAge(27);
+			console.log(person2.getAge());  // Output: 27
+
+	</script>
+</body>
+</html>

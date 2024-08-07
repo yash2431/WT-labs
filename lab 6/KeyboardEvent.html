@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>WAP to recognize which keyboard event is fired</title>
+    </head>
+    <body>
+        <h1>Keyboard event is fired</h1>
+        <p>Enter your name</p>
+        <input type = "text" id = "name" onkeydown="myfunction()">
+        <script>
+            function myfunction(){
+                var x = document.getElementById("name");
+                if(x.value == "Satya"){
+                    alert("You have entered a name");
+                }
+            }
+        </script>
+    </body>
+</html>

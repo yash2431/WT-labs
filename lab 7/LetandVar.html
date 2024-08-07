@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Demonstrate the difference between let and var</title>
+    </head>
+    <body>
+        <script>
+            var x=1;
+            function add(){
+                let x=2;
+                console.log("inside"+x);
+            }
+            add();
+            console.log("outside"+x);
+        </script>
+    </body>
+</html>

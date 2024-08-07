@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>WAP to recognize which mouse event is fired</title>
+    </head>
+    <body>
+        <h1>Mouse Event</h1>
+        <p>Click on the button to see the mouse event</p>
+        <button id="btn">Click Me</button>
+        <script>
+            document.getElementById("btn").addEventListener("click", function(){
+                console.log("Mouse Clicked");
+            });
+            document.getElementById("btn").addEventListener("mouseover", function(){
+                console.log("Mouse Over");
+            });
+            document.getElementById("btn").addEventListener("mouseout", function(){
+                console.log("Mouse out");
+            });
+        </script>
+        </body>
+</html>

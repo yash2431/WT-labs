@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>WAP to demonstrate change in properties of HTML element using JavaScript</title>
+    </head>
+    <body>
+        <h1>Change Properties</h1>
+        <p id = "para">This is a paragraph</p>
+        <button onclick = "change()">Change</button>
+    <script>
+        function change(){
+            var para = document.getElementById("para");
+            para.style.color = "red";
+            para.style.textalign = "center";
+            para.style.fontsize = "50px";
+        }
+    </script>
+    </body>
+</html>
